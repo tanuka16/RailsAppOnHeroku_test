@@ -29,7 +29,7 @@
 
 <% @shoes.each do |shoe| %>
   <div class="column">
-    <img src=<%= "/assets/#{shoe.img_url}" %> alt="Snow" style="width:100%">
+    <img src=<%= "#{image_url(shoe.img_url)}" %> alt="Snow" style="width:100%">
     <%= button_to "Like", {controller: 'likes', action: 'create', shoe_id: shoe.id} %><br>
     <%= link_to shoe.brand, shoe %><br>
     <%= shoe.title %><br>
