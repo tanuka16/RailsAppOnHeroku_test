@@ -24,7 +24,8 @@ class ShoesController < ApplicationController
 
   def show
     @shoe = Shoe.find_by(id: params[:id])
-    @user = User.find(session[:user_id])
+    # @user = User.find(session[:user_id])
+    @user = User.find(params[:id])
   end
 
   def new
