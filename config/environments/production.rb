@@ -27,7 +27,8 @@ Rails.application.configure do
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = true
-  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
+  config.serve_static_files = false
+  # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
 
 
   # Compress JavaScripts and CSS
