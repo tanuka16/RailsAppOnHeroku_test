@@ -4,7 +4,7 @@ class LikesController < ApplicationController
      def create
        # byebug
        shoe = Shoe.find(params[:shoe_id])
-       user = User.find(session[:user_id])
+       user = User.find_by_id(session[:user_id])
 
        shoe_id_exists = user.already_liked?(shoe.id)
 
@@ -16,7 +16,5 @@ class LikesController < ApplicationController
          redirect_to user_path(user)
        end
     end
-
-
 
 end
